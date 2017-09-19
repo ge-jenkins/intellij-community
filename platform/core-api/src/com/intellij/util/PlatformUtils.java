@@ -48,7 +48,9 @@ public class PlatformUtils {
 
   public static boolean isJetBrainsProduct() {
     final ApplicationInfo appInfo = ApplicationInfo.getInstance();
-    return appInfo != null && appInfo.getShortCompanyName().equals("JetBrains");
+    return appInfo != null && 
+           appInfo.getShortCompanyName() != null && 
+           appInfo.getShortCompanyName().equals("JetBrains");
   }
 
   public static boolean isIntelliJ() {
